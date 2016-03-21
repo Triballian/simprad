@@ -8,7 +8,7 @@ http://stackoverflow.com/questions/31217274/python-simplifying-radicals-not-goin
 
 from math import modf
 from math import sqrt
-from os import system
+#from os import system
 
 #Establish input
 
@@ -28,10 +28,10 @@ class Sqrtinput():
         squared = sqrt(A)
         fractional, integral = modf(squared)
         if fractional == 0:
-            print("The answer is "+str(int(squared)))
+            print("The answer is "+ u'\u221a' +str(int(squared)))
         else:
             if A < 8:
-                print 'The answer is J' + str(A)
+                print 'The answer is ' + u'\u221a' + str(A)
             else:
 #                print A
 #Here we build a for loop ranged from 2 to spesquared[1] The devide into A .
@@ -42,10 +42,10 @@ class Sqrtinput():
                     print number
                     rem = A%number**2
                     if not rem:
-                        answer = 'The answer is ' + str(number) + 'J' + str(A/number**2)
+                        answer = 'The answer is ' + str(number) + u'\u221a' + str(A/number**2)
                         
                 if not answer:
-                    print('The answer is J' + str(A))
+                    print('The answer is '+ u'\u221a' + str(A))
                 else:                                    
                     print answer
             
